@@ -1,4 +1,7 @@
-if [[ "$PWD" -ne pathsInMap ]]: then
+#! /bin/sh
+
+if [[ "$PWD" != pathsInMap ]]
+then
     echo "Can't continue. Make sure you execute this script from the root of pathsInMap repo/direcotory"
 else
     mkdir build
