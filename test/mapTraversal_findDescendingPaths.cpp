@@ -38,7 +38,10 @@ TEST(mapTraversal, findDescendingPaths_SinglePointTest)
 
 TEST(mapTraversal, findDescendingPaths_FlatTerrainTest)
 {
-    std::vector<std::vector<int>> map = {{1,1}, {1,1}};
+    std::vector<std::vector<int>> map = {
+        {1,1}, 
+        {1,1}
+        };
 
     std::vector<std::vector<std::pair<int, int>>>  descendingPointsFound;
     const std::vector<std::vector<std::pair<int, int>>>  descendingPointsExpected = {
@@ -46,17 +49,13 @@ TEST(mapTraversal, findDescendingPaths_FlatTerrainTest)
         { {0,0} },
         { {1,0} },
         { {0,1}, {0,0} },
-        { {0,1}, {1,0} },
-        { {1,1}, {0,0} },
-        { {1,1}, {1,0} },
+        { {1,1}, {1,0} }
 
         // All descending Path towards atlantic
         { {0,1} },
         { {1,1} },
         { {0,0}, {0,1} },
-        { {0,0}, {1,1} },
-        { {1,0}, {0,1} },
-        { {1,0}, {1,1} },
+        { {1,0}, {1,1} }
         };
 
     descendingPointsFound = findDescendingPaths(map);
@@ -78,22 +77,17 @@ TEST(mapTraversal, findDescendingPaths_OneHighPointTest)
         { {0,0} },
         { {1,0} },
         { {2,0} },
-        { {1,1}, {0,0} },
         { {1,1}, {1,0} },
-        { {1,1}, {2,0} },
-        { {1,1}, {1,0}, {0,0} },
-        { {1,1}, {2,0}, {0,0} },
+        { {1,1}, {0,1}, {0,0} },
+        { {1,1}, {2,1}, {2,0} },
 
         // All descending Path towards atlantic
         // (Note: Apparently going to pacific from mid and then back to atlantic is also a path but we'll not count those)
         { {2,0} },
         { {2,1} },
         { {2,2} },
-        { {1,1}, {0,2} },
-        { {1,1}, {1,2} },
-        { {1,1}, {2,2} },
-        { {1,1}, {1,0}, {2,0} },
-        { {1,1}, {2,0}, {2,2} }
+        { {1,1}, {0,1}, {0,2} },
+        { {1,1}, {2,1}, {2,2} }
         };
 
     descendingPointsFound = findDescendingPaths(map);
@@ -115,44 +109,26 @@ TEST(mapTraversal, findDescendingPaths_MultiHighPointTest)
         { {0,0} },
         { {1,0} },
         { {2,0} },
-        { {1,1}, {0,0} },
         { {1,1}, {1,0} },
-        { {1,1}, {2,0} },
 
         { {0,1}, {0,0} },
-        { {0,1}, {1,0} },
         { {2,1}, {2,0} },
-        { {2,1}, {1,0} },
 
-        { {0,1}, {1,1}, {0,0} },
         { {0,1}, {1,1}, {1,0} },
-        { {0,1}, {1,1}, {2,0} },
-
-        { {2,1}, {1,1}, {0,0} },
         { {2,1}, {1,1}, {1,0} },
-        { {2,1}, {1,1}, {2,0} },
 
         // All descending Path towards atlantic
         // (Note: Apparently going to pacific from mid and then back to atlantic is also a path but we'll not count those)
         { {2,0} },
         { {2,1} },
         { {2,2} },
-        { {1,1}, {0,2} },
         { {1,1}, {1,2} },
-        { {1,1}, {2,2} },
 
         { {0,1}, {0,2} },
-        { {0,1}, {1,2} },
         { {2,1}, {2,2} },
-        { {2,1}, {1,2} },
 
-        { {0,1}, {1,1}, {0,2} },
         { {0,1}, {1,1}, {1,2} },
-        { {0,1}, {1,1}, {2,2} },
-
-        { {2,1}, {1,1}, {0,2} },
         { {2,1}, {1,1}, {1,2} },
-        { {2,1}, {1,1}, {2,2} }
         };
 
     descendingPointsFound = findDescendingPaths(map);

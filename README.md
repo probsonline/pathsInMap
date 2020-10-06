@@ -52,3 +52,4 @@ Given a map of continental USA find all the descending points to Atlantic and Pa
     * Should we return two lists; one towards pacific and the other towards atlantic
     * Do the descending points need to be ordered in a specific way (like does it need to form a path)
     * The points don't need to along the shortest path
+    * going diagonally also makes writing test cases much more difficult. So restricting to 4 directional movement only
