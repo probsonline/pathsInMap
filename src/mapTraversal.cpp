@@ -1,14 +1,14 @@
 #include "mapTraversal.h"
 
-void findDescendingPaths(std::vector<std::vector<int>> &map, std::vector<std::vector<int>> &paths, std::vector<int> aPath){
+void findDescendingPaths(std::vector<std::vector<int>> &map, std::vector<std::vector<std::pair<int, int>>> &paths, std::vector<std::pair<int, int>> aPath){
 
 
 }
 
 
-std::vector<std::vector<int>> findDescendingPaths(std::vector<std::vector<int>> &map){
+std::vector<std::vector<std::pair<int, int>>> findDescendingPaths(std::vector<std::vector<int>> &map){
 
-    std::vector<std::vector<int>> result;
+    std::vector<std::vector<std::pair<int, int>>> result;
 
 
 

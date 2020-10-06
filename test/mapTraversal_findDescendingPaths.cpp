@@ -6,13 +6,33 @@ TEST(mapTraversal, findDescendingPaths_EmptyTest)
 {
     std::vector<std::vector<int>> map = {{}};
 
-    std::vector<std::vector<int>> descendingPointsFound;
-    std::vector<std::vector<int>> descendingPointsExpected = {};
+    std::vector<std::vector<std::pair<int, int>>>  descendingPointsFound;
+    const std::vector<std::vector<std::pair<int, int>>>  descendingPointsExpected = {};
 
     descendingPointsFound = findDescendingPaths(map);
     EXPECT_EQ(descendingPointsFound, descendingPointsExpected);
 }
 
+TEST(mapTraversal, findDescendingPaths_SinglePointTest)
+{
+    std::vector<std::vector<int>> map = {{1}};
+
+    std::vector<std::vector<std::pair<int, int>>>  descendingPointsFound;
+    const std::vector<std::vector<std::pair<int, int>>>  descendingPointsExpected = {{{0,0}}};
+
+    descendingPointsFound = findDescendingPaths(map);
+    EXPECT_EQ(descendingPointsFound, descendingPointsExpected);
+}
+
+
+
+
+
+
+
+
+
+/*
 TEST(mapTraversal, findDescendingPaths_SinglePathTest)
 {
     std::vector<std::vector<int>> map = {{5,4,3,2,1}};
@@ -62,3 +82,4 @@ TEST(mapTraversal, findDescendingPaths2)
     descendingPointsFound = findDescendingPaths(map);
     EXPECT_EQ(descendingPointsFound, descendingPointsExpected);
 }
+*/

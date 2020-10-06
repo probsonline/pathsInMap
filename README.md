@@ -46,3 +46,5 @@ Given a map of continental USA find all the descending points to Atlantic and Pa
         - we keep on recording the points
 
 ### Let's try this matrix based solution
+    * Tryig to follow TDD (Test driven development), I realize that we need to return the points and if we use a matrix representation, then we just need to return the indices of the elements that form the descending paths and not the element values themselves.
+    * 
