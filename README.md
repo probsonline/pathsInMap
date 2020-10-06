@@ -47,4 +47,8 @@ Given a map of continental USA find all the descending points to Atlantic and Pa
 
 ### Let's try this matrix based solution
     * Tryig to follow TDD (Test driven development), I realize that we need to return the points and if we use a matrix representation, then we just need to return the indices of the elements that form the descending paths and not the element values themselves.
-    * 
+    * As we discussed previously, this also implies that if we find paths from one element in the matrix, then the same solution can be applies for each element. That means the problem is simplified to finding all the descending paths from a given starting point (which can be chosen as random)
+    * Similarly, we can say that if the starting point should be the highest one, then the problem would become simpler where it would be all possible descending paths from the highest point
+    * Should we return two lists; one towards pacific and the other towards atlantic
+    * Do the descending points need to be ordered in a specific way (like does it need to form a path)
+    * The points don't need to along the shortest path
